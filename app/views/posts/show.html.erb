@@ -1,0 +1,13 @@
+<div class="col-lg-10 mx-auto">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @post %>
+  <%= link_to "Download as PDF",download_post_path(@post),class:"btn btn-primary mt-3 mb-3"%>
+   <%= link_to "Preview and Download",download_post_path(@post,preview: true),class:"btn btn-primary mt-3 mb-3"%>
+  <div>
+    <%= link_to "Edit this post", edit_post_path(@post) %> |
+    <%= link_to "Back to posts", posts_path %>
+
+    <%= button_to "Destroy this post", @post, method: :delete %>
+  </div>
+</div>

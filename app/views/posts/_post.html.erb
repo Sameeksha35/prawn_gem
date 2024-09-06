@@ -1,0 +1,14 @@
+<div id="<%= dom_id post %>">
+  <h1>
+    <%= post.title %>
+  </h1>
+
+  <% if post.cover_image.attached? %>
+    <%= image_tag post.cover_image,class: 'img-fluid' %>
+  <%end%> 
+
+  <p class="lead">
+    <%= post.description %>
+  </p>
+
+</div>
