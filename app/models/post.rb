@@ -22,7 +22,7 @@ class Post < ApplicationRecord
         post_pdf.bounding_box([post_pdf.bounds.left,post_pdf.bounds.top - 60 ],width: post_pdf.bounds.width,height: post_pdf.bounds.height - 100) do
         post_pdf.text title,size: 30,style: :bold,align: :center
         # post_pdf.move_down 100
-        post_pdf.image StringIO.open(cover_image.download),at:[20,580],width: 500 
+        post_pdf.image StringIO.open(cover_image.download),at:[2 0,580],width: 500 
         post_pdf.move_down 300
         post_pdf.text description
         end
